@@ -7,7 +7,7 @@ const serverConfig = {
     entry: './src/index.ts',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'plugin.js',
+        filename: 'index.js',
         libraryTarget: 'commonjs',
         libraryExport: 'default',
     },

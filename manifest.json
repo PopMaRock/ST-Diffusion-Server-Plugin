@@ -3,7 +3,7 @@
     "loading_order": 10,
     "requires": [],
     "optional": [
-        "sd-plugin"
+        "ST-WebUI-Diffusion-Server"
     ],
     "js": "index.js",
     "author": "Vincedundee",
