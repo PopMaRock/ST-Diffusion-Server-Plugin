@@ -178,7 +178,7 @@ export async function exit(): Promise<void> {
 }
 
 export const info: PluginInfo = {
-    id: 'ST-WebUI-Diffusion-Server',
+    id: 'stwebui-sd-plugin',
     name: 'Server Plugin for Silly Tavern Alternative SD Plugin',
     description: 'Allows additional SD Forge/A1111 API endpoints to be used',
 };
