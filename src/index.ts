@@ -1,6 +1,6 @@
 import bodyParser from 'body-parser';
 import { Router } from 'express';
-import { Chalk } from 'chalk';
+import chalk from 'chalk';
 
 interface PluginInfo {
   id: string;
@@ -13,8 +13,6 @@ interface Plugin {
   exit: () => Promise<void>;
   info: PluginInfo;
 }
-
-const chalk = new Chalk();
 const MODULE_NAME = '[sillyTavern-sd-plugin]';
 
 function getBasicAuthHeader(auth: string): string {

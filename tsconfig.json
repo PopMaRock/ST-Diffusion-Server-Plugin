@@ -1,12 +1,11 @@
 {
     "compilerOptions": {
-        "target": "ES6",
-        "module": "commonjs",
-        "outDir": "./dist",
-        "strict": true,
-        "esModuleInterop": true,
-        "sourceMap": true,
-        "forceConsistentCasingInFileNames": true
+        "target": "ES6", // Target ES6 or later
+        "module": "commonjs", // Use CommonJS modules
+        "outDir": "./dist", // Output directory
+        "strict": true, // Enable strict type-checking options
+        "esModuleInterop": true, // Enable compatibility with CommonJS modules
+        "skipLibCheck": true // Skip type checking of declaration files
     },
     "include": [
         "src/**/*.ts",
