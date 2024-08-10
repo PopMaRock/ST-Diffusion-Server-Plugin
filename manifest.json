@@ -5,7 +5,7 @@
     "optional": [
         "ST-WebUI-Diffusion-Server"
     ],
-    "js": "plugin.js",
+    "js": "index.js",
     "author": "Vincedundee",
     "version": "1.0.0",
     "homePage": ""
