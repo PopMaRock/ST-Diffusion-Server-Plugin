@@ -1,4 +1,4 @@
-const express = require('express');
+import express from 'express';
 
 const jsonParser = express.json({ limit: '200mb' });
 
