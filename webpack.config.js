@@ -1,4 +1,3 @@
-const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
 
 const serverConfig = {
@@ -6,7 +5,6 @@ const serverConfig = {
     target: 'node',
     entry: './src/index.ts',
     output: {
-        path: path.resolve(__dirname, 'dist'),
         filename: 'index.js',
         libraryTarget: 'commonjs',
         libraryExport: 'default',
