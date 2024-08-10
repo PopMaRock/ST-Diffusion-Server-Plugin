@@ -1,8 +1,9 @@
+import { Router } from 'express';
+
 async function loadBodyParser() {
     const bodyParser = await import('body-parser');
     return bodyParser.default;
 }
-import { Router } from 'express';
 
 interface PluginInfo {
   id: string;
