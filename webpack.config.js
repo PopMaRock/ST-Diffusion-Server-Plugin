@@ -3,7 +3,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const serverConfig = {
     devtool: false,
     target: 'node',
-    entry: './src/index.ts',
+    entry: './index.js',
     output: {
         filename: 'index.js',
         libraryTarget: 'commonjs',
