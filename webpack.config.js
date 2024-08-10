@@ -20,4 +20,12 @@ module.exports = {
             },
         ],
     },
+    externals: [ // Avoid bundling Node.js built-in modules
+        function ({ request }, callback) {
+            if (/^[a-z\-0-9]+$/.test(request)) {
+                return callback(null, 'commonjs ' + request);
+            }
+            callback();
+        },
+    ],
 };

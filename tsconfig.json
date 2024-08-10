@@ -1,7 +1,8 @@
 {
     "compilerOptions": {
         "target": "ES6", // Target ES6 or later
-        "module": "commonjs", // Use CommonJS modules
+        "module": "NodeNext", // Use ESNext modules
+        "moduleResolution": "nodenext", // Use Node.js module resolution
         "outDir": "./dist", // Output directory
         "strict": true, // Enable strict type-checking options
         "esModuleInterop": true, // Enable compatibility with CommonJS modules
@@ -10,7 +11,7 @@
     "include": [
         "src/**/*.ts",
         "src/**/*.tsx"
-, "src/index.ts"    ],
+, "src/index.ts"],
     "exclude": [
         "node_modules",
         "dist",

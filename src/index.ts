@@ -1,6 +1,5 @@
 import bodyParser from 'body-parser';
 import { Router } from 'express';
-import chalk from 'chalk';
 
 interface PluginInfo {
   id: string;
@@ -35,7 +34,7 @@ export async function init(router: Router): Promise<void> {
             const { message } = req.body;
             return res.json({ message: `Pong! ${message}` });
         } catch (error) {
-            console.error(chalk.red(MODULE_NAME), 'Request failed', error);
+            console.error(MODULE_NAME, 'Request failed', error);
             return res.status(500).send('Internal Server Error');
         }
     });
@@ -168,11 +167,11 @@ export async function init(router: Router): Promise<void> {
         }
     });
 
-    console.log(chalk.green(MODULE_NAME), 'Plugin loaded!');
+    console.log(MODULE_NAME, 'Plugin loaded!');
 }
 
 export async function exit(): Promise<void> {
-    console.log(chalk.yellow(MODULE_NAME), 'Plugin exited');
+    console.log(MODULE_NAME, 'Plugin exited');
 }
 
 export const info: PluginInfo = {
