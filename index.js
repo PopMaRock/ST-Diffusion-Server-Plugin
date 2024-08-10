@@ -1,8 +1,7 @@
-import bodyParser from 'body-parser';
-import { Chalk } from 'chalk';
+const express = require('express');
 
+const jsonParser = express.json({ limit: '200mb' });
 
-const chalk = new Chalk();
 const MODULE_NAME = '[sillyTavern-sd-plugin]';
 
 function getBasicAuthHeader(auth) {
@@ -14,7 +13,6 @@ function getBasicAuthHeader(auth) {
  * @param router Express Router
  */
 export async function init(router) {
-    const jsonParser = bodyParser.json();
     // Used to check if the server plugin is running
     router.post('/probe', (_req, res) => {
         return res.sendStatus(204);
@@ -25,7 +23,7 @@ export async function init(router) {
             const { message } = req.body;
             return res.json({ message: `Pong! ${message}` });
         } catch (error) {
-            console.error(chalk.red(MODULE_NAME), 'Request failed', error);
+            console.error((MODULE_NAME), 'Request failed', error);
             return res.status(500).send('Internal Server Error');
         }
     });
