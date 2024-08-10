@@ -1,0 +1,38 @@
+{
+    "name": "sillyTavern-sd-plugin",
+    "version": "1.0.0",
+    "description": "Allows additional SD Forge/A1111 API endpoints to be used",
+    "main": "dist/plugin.js",
+    "type": "commonjs",
+    "scripts": {
+        "build:dev": "webpack --mode development",
+        "build": "webpack --mode production",
+        "lint": "eslint .",
+        "lint:fix": "eslint --fix ."
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vincedundee/ST-Diffusion-Server-Plugin.git"
+    },
+    "author": "Cohee1207",
+    "license": "AGPL-3.0-or-later",
+    "bugs": {
+        "url": "https://github.com/vincedundee/ST-Diffusion-Server-Plugin/issues"
+    },
+    "homepage": "https://github.com/vincedundee/ST-Diffusion-Server-Plugin",
+    "devDependencies": {
+        "@eslint/js": "^9.0.0",
+        "@types/express": "^4.17.21",
+        "eslint": "^8.57.0",
+        "terser-webpack-plugin": "^5.3.10",
+        "ts-loader": "^9.5.1",
+        "typescript": "^5.4.5",
+        "typescript-eslint": "^7.6.0",
+        "webpack": "^5.93.0",
+        "webpack-cli": "^5.1.4"
+    },
+    "dependencies": {
+        "body-parser": "^1.20.2",
+        "chalk": "^5.3.0"
+    }
+}
