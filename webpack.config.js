@@ -1,41 +1,23 @@
 const path = require('path');
-const TerserPlugin = require('terser-webpack-plugin');
 
-const serverConfig = {
-    devtool: false,
-    target: 'node',
-    entry: './src/index.ts',
+module.exports = {
+    entry: './src/index.ts', // Entry point for your TypeScript file
     output: {
-        path: path.resolve(__dirname, 'dist'),
         filename: 'index.js',
-        libraryTarget: 'commonjs',
-        libraryExport: 'default',
+        path: path.resolve(__dirname, 'dist'),
+        libraryTarget: 'commonjs2', // Ensure the output is compatible with Node.js
     },
+    target: 'node', // Target Node.js environment
     resolve: {
-        extensions: ['.ts', '.js'],
+        extensions: ['.ts', '.js'], // Resolve both .ts and .js files
     },
     module: {
         rules: [
             {
                 test: /\.ts$/,
-                use: 'ts-loader',
                 exclude: /node_modules/,
+                use: 'ts-loader', // Use ts-loader for TypeScript files
             },
         ],
     },
-    optimization: {
-        minimizer: [
-            new TerserPlugin({
-                extractComments: false,
-                terserOptions: {
-                    format: {
-                        comments: false,
-                    },
-                },
-            }),
-        ],
-    },
-    plugins: [],
 };
-
-module.exports = [serverConfig];
