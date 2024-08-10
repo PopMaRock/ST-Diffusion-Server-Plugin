@@ -28,7 +28,7 @@ export async function init(router: Router): Promise<void> {
         return res.sendStatus(204);
     });
     // Use body-parser to parse the request body
-    router.post('/ping', jsonParser, async (req, res) => {
+    router.get('/ping', jsonParser, async (req, res) => {
         try {
             const { message } = req.body;
             return res.json({ message: `Pong! ${message}` });
