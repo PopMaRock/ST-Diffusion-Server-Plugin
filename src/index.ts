@@ -1,4 +1,7 @@
-import bodyParser from 'body-parser';
+async function loadBodyParser() {
+    const bodyParser = await import('body-parser');
+    return bodyParser.default;
+}
 import { Router } from 'express';
 
 interface PluginInfo {
@@ -23,6 +26,7 @@ function getBasicAuthHeader(auth: string): string {
  * @param router Express Router
  */
 export async function init(router: Router): Promise<void> {
+    const bodyParser = await loadBodyParser();
     const jsonParser = bodyParser.json();
     // Used to check if the server plugin is running
     router.post('/probe', (_req, res) => {
