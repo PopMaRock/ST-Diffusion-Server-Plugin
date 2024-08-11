@@ -17,5 +17,4 @@ This is an accompanying server plugin to allow https://github.com/vincedundee/ST
 ## Step 2
 1. Open config.yaml in a text editor 
 2. Set enableServerPlugins:true 
-3. You can now replace your Stable Diffusion folder as per ST WebUI Diffusion instructions
-4. Start Silly Tavern.
+3. Start Silly Tavern.
