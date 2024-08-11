@@ -4,7 +4,7 @@ This is an accompanying server plugin to allow https://github.com/vincedundee/ST
 
 # How to install
 
-## Step 1
+## Step 1 (pick one option)
 
 ### Option 1
 1. Go to your plugin folder located in ./SillyTavern/plugins
