@@ -15,6 +15,7 @@ This is an accompanying server plugin to allow https://github.com/vincedundee/ST
 2. Extract the folder to ./SillyTavern/plugins
 
 ## Step 2
+1. Go to your SillyTavern install directory (top level)
 1. Open config.yaml in a text editor 
 2. Set enableServerPlugins:true 
 3. Start Silly Tavern.
